@@ -46,17 +46,9 @@ export default class ShoppingGrid extends Component {
   render() {
     return (
       <div className="shopping-grid">
-        {this.state.shoppingItems.map(
-          ({ id, title, imageUrl, linkUrl, size }) => (
-            <ShoppingCard
-              key={id}
-              size={size}
-              title={title}
-              imageUrl={imageUrl}
-              linkUrl={linkUrl}
-            ></ShoppingCard>
-          )
-        )}
+        {this.state.shoppingItems.map(({ id, ...shoppingItem }) => (
+          <ShoppingCard key={id} {...shoppingItem}></ShoppingCard>
+        ))}
       </div>
     );
   }
