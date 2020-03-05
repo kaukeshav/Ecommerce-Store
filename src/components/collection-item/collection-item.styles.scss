@@ -1,0 +1,28 @@
+.collection-item {
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 25%;
+  &:not(:last-child) {
+    padding-right: 32px;
+  }
+
+  &__bg-img {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+  &__footer {
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 16px;
+    .price {
+      margin: 0;
+    }
+    .name {
+      margin: 0;
+    }
+  }
+}

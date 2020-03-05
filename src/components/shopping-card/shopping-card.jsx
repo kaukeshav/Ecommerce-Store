@@ -6,8 +6,9 @@ const ShoppingCard = ({ title, imageUrl, size, linkUrl, match, history }) => {
   const cssClass = size
     ? `shopping-card shopping-card--large`
     : 'shopping-card';
+  const requireImg = require(`../../${imageUrl}`);
   const bgImage = {
-    backgroundImage: `url(${imageUrl})`
+    backgroundImage: `url(${requireImg})`
   };
 
   return (
