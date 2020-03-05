@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './sign-in.styles.scss';
+import { FormInput } from '../index';
 
 class SingIn extends Component {
   constructor(props) {
@@ -20,12 +21,12 @@ class SingIn extends Component {
   };
 
   handleSubmit = e => {
+    e.preventDefault();
+
     this.setState({
       email: '',
       password: ''
     });
-    e.preventDefault();
-    console.log('e', e);
   };
 
   render() {
@@ -35,21 +36,21 @@ class SingIn extends Component {
         <h2>Form Heading</h2>
         <p>Form caption stuff goes here...</p>
         <form className="sign-in__form" onSubmit={this.handleSubmit}>
-          <label htmlFor="sign-in-email">Email</label>
-          <input
+          <FormInput
+            label="Email"
             type="text"
             name="email"
             id="sign-in-email"
-            onChange={this.handleChange}
+            handleChange={this.handleChange}
             value={email}
           />
 
-          <label htmlFor="sign-in-password">Password</label>
-          <input
+          <FormInput
+            label="Password"
             type="password"
             id="sign-in-password"
             name="password"
-            onChange={this.handleChange}
+            handleChange={this.handleChange}
             value={password}
           />
 
