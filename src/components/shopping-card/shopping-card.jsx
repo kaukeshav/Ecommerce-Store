@@ -18,7 +18,7 @@ const ShoppingCard = ({ title, imageUrl, size, linkUrl, match, history }) => {
     >
       <div className="shopping-card__bg-img" style={bgImage}></div>
       <div className="shopping-card__overlay-text">
-        <h2 className="shopping-card__title">{title}</h2>
+        <h2 className="shopping-card__title">{title.toUpperCase()}</h2>
         <h3 className="shopping-card__sub-title">Shop Now</h3>
       </div>
     </div>

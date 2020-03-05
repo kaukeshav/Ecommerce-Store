@@ -10,6 +10,14 @@
 .e-commerce-app {
   max-width: 1240px;
   margin: 0 auto;
+  /* background: radial-gradient(at 50% 0, black, #232020 70%),
+    linear-gradient(0deg, black, #d41e1e 50%) bottom; */
+  /* box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+#root {
+  /* background: radial-gradient(at 50% 0, red, #2b2222 70%),
+    linear-gradient(0deg, #717171, #3a2929 50%) bottom; */
+  min-height: 100vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -1,0 +1,34 @@
+.global-header {
+  background-color: white;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  max-width: 1240px;
+  margin: 0 auto;
+
+  &__brand-container {
+    height: 100%;
+    width: 70px;
+    padding: 25px;
+  }
+
+  &__nav {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &-item {
+      padding: 10px 15px;
+    }
+  }
+
+  //all links in header
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
