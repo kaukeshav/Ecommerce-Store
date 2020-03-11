@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../images/crown.svg';
-import { auth } from '../../firebase/firebase';
+import { auth } from '../../firebase';
 import './header.styles.scss';
 
 const Header = ({ currentUser }) => {

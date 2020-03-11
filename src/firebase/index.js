@@ -22,6 +22,32 @@ firebase.analytics();
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
+export const createUserProfile = async (userAuth, additionalData = {}) => {
+  if (!userAuth) return;
+
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
+
+  const snapShot = await userRef.get(); // async request
+
+  // if users is not added to database
+  if (!snapShot.exists) {
+    const { displayName, email } = userAuth;
+    const createdAt = new Date();
+
+    try {
+      //adding user to firebase database - async request (try/catch)
+      userRef.set({
+        displayName,
+        email,
+        createdAt,
+        ...additionalData
+      });
+    } catch (err) {
+      console.error('ERROR MSG:' + err);
+    }
+  }
+};
+
 export const providerGoogle = new firebase.auth.GoogleAuthProvider();
 providerGoogle.setCustomParameters({
   prompt: 'select_account'

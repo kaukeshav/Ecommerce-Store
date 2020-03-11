@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Homepage, Shoppage, SignInAndSignUp } from './pages';
 import { Header } from './components';
-import { auth } from './firebase/firebase';
+import { auth, createUserProfile } from './firebase';
 import './App.css';
 
 class App extends Component {
@@ -17,9 +17,7 @@ class App extends Component {
 
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user });
-
-      console.log('user details', user);
+      createUserProfile(user); // adding a new user if doesn't exists in DB
     });
   }
 
