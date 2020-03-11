@@ -36,16 +36,18 @@ export const createUserProfile = async (userAuth, additionalData = {}) => {
 
     try {
       //adding user to firebase database - async request (try/catch)
-      userRef.set({
+      await userRef.set({
         displayName,
         email,
         createdAt,
         ...additionalData
       });
     } catch (err) {
-      console.error('ERROR MSG:' + err);
+      console.error('ERROR MSG:' + err.message);
     }
   }
+
+  return userRef;
 };
 
 export const providerGoogle = new firebase.auth.GoogleAuthProvider();
