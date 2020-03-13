@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './sign-in.styles.scss';
 import { FormInput, CustomButton } from '../index';
-import { signInWithGoogle } from '../../firebase';
+import { auth, signInWithGoogle } from '../../firebase';
 
 class SingIn extends Component {
   constructor(props) {
@@ -21,13 +21,17 @@ class SingIn extends Component {
     });
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
+  handleSubmit = async event => {
+    event.preventDefault();
 
-    this.setState({
-      email: '',
-      password: ''
-    });
+    const { email, password } = this.state;
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({ email: '', password: '' });
+    } catch (err) {
+      console.log('ERROR MSG!!' + err);
+    }
   };
 
   render() {
