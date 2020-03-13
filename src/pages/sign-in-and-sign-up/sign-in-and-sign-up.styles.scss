@@ -1,0 +1,18 @@
+.signin-signup {
+  display: flex;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background: white;
+
+  .sign-in-form,
+  .sign-up-form {
+    flex: 1 1 47%;
+    max-width: 47%;
+  }
+  .sign-in-form {
+    margin-right: 6%;
+  }
+}

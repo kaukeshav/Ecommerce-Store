@@ -10,11 +10,11 @@ $main-color: black;
 .form-input-container {
   position: relative;
   margin: 45px 0;
-  max-width: 30vw;
+  // max-width: 30vw;
 
   .form-input {
     background: none;
-    background-color: white;
+    background-color: transparent;
     color: $sub-color;
     font-size: 18px;
     padding: 10px 10px 10px 5px;

@@ -6,6 +6,7 @@ import Header from './header/header.component';
 import SignIn from './sign-in/sign-in.component';
 import FormInput from './form-input/form-input.component';
 import CustomButton from './custom-button/custom-button.component';
+import SignUp from './sign-up/sign-up.component';
 export {
   ShoppingCard,
   ShoppingGrid,
@@ -14,5 +15,6 @@ export {
   Header,
   SignIn,
   FormInput,
-  CustomButton
+  CustomButton,
+  SignUp
 };
