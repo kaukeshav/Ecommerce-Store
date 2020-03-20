@@ -7,14 +7,19 @@ import SignIn from './sign-in/sign-in.component';
 import FormInput from './form-input/form-input.component';
 import CustomButton from './custom-button/custom-button.component';
 import SignUp from './sign-up/sign-up.component';
+import CartIcon from './cart-icon/cart-icon.component';
+import CartDropdown from './cart-dropdown/cart-dropdown.component';
+
 export {
-  ShoppingCard,
-  ShoppingGrid,
+  CartDropdown,
+  CartIcon,
   CollectionPreview,
   CollectionItem,
-  Header,
-  SignIn,
-  FormInput,
   CustomButton,
+  FormInput,
+  Header,
+  ShoppingCard,
+  ShoppingGrid,
+  SignIn,
   SignUp
 };
