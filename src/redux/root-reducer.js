@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import userReducer from './user/user.reducer';
-import cartReducer from './cart/cart.reducer';
+
+import { cartReducer, userReducer } from './modules';
 
 export default combineReducers({
   user: userReducer, // key user re-present key in overall state object

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-
-import { Homepage, Shoppage, SignInAndSignUp } from './pages';
-import { auth, createUserProfile } from './firebase';
-import { Header } from './components';
 import { connect } from 'react-redux';
-import { setCurrentUser } from './redux/user/user.actions';
+
+import { auth, createUserProfile } from './firebase';
+import { setCurrentUser } from './redux/modules/user/user.actions';
+
+import { Header } from './components';
+import { Homepage, Shoppage, SignInAndSignUp } from './pages';
 import './App.css';
 
 class App extends Component {
