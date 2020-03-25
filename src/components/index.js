@@ -9,10 +9,12 @@ import CustomButton from './custom-button/custom-button.component';
 import SignUp from './sign-up/sign-up.component';
 import CartIcon from './cart-icon/cart-icon.component';
 import CartDropdown from './cart-dropdown/cart-dropdown.component';
+import CartItem from './cart-item/cart-item.component';
 
 export {
   CartDropdown,
   CartIcon,
+  CartItem,
   CollectionPreview,
   CollectionItem,
   CustomButton,
