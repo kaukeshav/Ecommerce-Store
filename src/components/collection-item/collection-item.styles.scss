@@ -1,8 +1,11 @@
 .collection-item {
+  $self: &;
   height: 380px;
+  position: relative;
   display: flex;
   flex-direction: column;
   flex: 1 1 25%;
+
   &:not(:last-child) {
     padding-right: 32px;
   }
@@ -23,6 +26,27 @@
     }
     .name {
       margin: 0;
+    }
+  }
+
+  //custom button inside collection item
+  .button {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 65px;
+    top: auto;
+    left: 16px;
+    width: calc(100% - 64px);
+  }
+
+  &:hover {
+    #{$self}__bg-img {
+      opacity: 0.75;
+    }
+    .button {
+      opacity: 0.85;
+      visibility: visible;
     }
   }
 }

@@ -17,12 +17,25 @@
     border: 1px solid black;
   }
 
+  //google button
   &.google-blue {
     background-color: #4c8bf5;
     color: white;
     &:hover {
       background-color: #2c68ca;
       border-color: transparent;
+    }
+  }
+
+  //inverted type button
+  &.inverted {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    &:hover {
+      background-color: black;
+      color: white;
+      border: 1px solid transparent;
     }
   }
 }
